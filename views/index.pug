@@ -1,5 +1,15 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  //- h1= title
+  //- p Welcome to #{title}
+  body(id='body')
+    h1 URL shortener
+  form(action='/add_movie', method='POST')
+    p
+      |
+      input(type='text', name='title', value='' placeholder="Enter the url" size="50" style="height:40px")
+    p
+      |
+      input(type='submit', value='Shorten' style="height:40px" class="btn")
+    
