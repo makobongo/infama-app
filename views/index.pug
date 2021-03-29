@@ -5,11 +5,13 @@ block content
   //- p Welcome to #{title}
   body(id='body')
     h1 URL shortener
-  form(action='/add_movie', method='POST')
-    p
-      |
-      input(type='text', name='title', value='' placeholder="Enter the url" size="50" style="height:40px")
-    p
-      |
-      input(type='submit', value='Shorten' style="height:40px" class="btn")
+    form(action='/shorten_link', method='POST')
+      p
+        |
+        input(type='text', name='url', value='' placeholder="Enter the url" size="50" style="height:40px")
+      p
+        |
+        input(type='submit', value='Shorten' style="height:40px" class="btn")
+    //- h1 title 
+    h1 #{title}
     
